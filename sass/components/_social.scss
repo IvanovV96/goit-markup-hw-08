@@ -1,0 +1,32 @@
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icons__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icons__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $social-sprite-color;
+    transition: background-color 250ms $timing-function,
+        fill 250ms $timing-function;
+}
+
+.icons__img {
+    width: 20px;
+    height: 20px;
+}
+
+.icons__link:hover,
+.icons__link:focus {
+    fill: $white-color;
+    background-color: $accent-color;
+    border: none;
+}

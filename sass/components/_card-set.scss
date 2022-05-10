@@ -1,0 +1,17 @@
+.card-set {
+    @extend %list;
+}
+
+@media screen and (min-width: $mobile) {  
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+}
+.card-set__item {
+    /*width: calc((100% - 60px) / 3);*/
+    width: 370px;
+    margin: 15px;
+    transition: box-shadow 250ms var(--timing-function);
+}

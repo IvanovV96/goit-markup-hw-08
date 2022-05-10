@@ -1,0 +1,223 @@
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 94px 15px;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, .2);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.modal {
+    position: relative;
+    padding: 40px;
+   
+
+    background-color: $white-color;
+    border-radius: 4px;
+
+    
+    transition: transform 250ms $timing-function;
+}
+
+.button-close {
+    display: inline-flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: $white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    cursor: pointer;
+    fill: black;
+    transition: fill 250ms $timing-function,
+        border-color 250ms $timing-function;
+}
+
+.button-close:hover,
+.button-close:focus {
+    outline: none;
+    fill: $accent-color;
+    border-color: $accent-color;
+}
+
+.button-close__img {
+    height: 11px;
+    width: 11px;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form__title {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+}
+
+.form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__field:not(:nth-of-type(4)) {
+    margin-bottom: 10px;
+}
+
+.form__field:nth-of-type(4) {
+    margin-bottom: 20px;
+}
+
+
+
+.form__input {
+    margin: 0;
+    padding: 11px 12px 11px 35px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-textarea {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    transition: border-color 250ms $timing-function;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.form-field input::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.agree {
+    display: flex;
+    
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.agree__link {
+    color: $accent-color;
+}
+
+.form-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color 250ms $timing-function;
+
+}
+
+.form-btn:hover,
+.form-btn:focus,
+.form-footer__btn:hover,
+.form-footer__btn:focus {
+    background-color: #188CE8;
+
+}
+
+.form-img {
+    position: absolute;
+    top: 31px;
+    left: 12px;
+    transition: fill 250ms $timing-function;
+}
+
+.form__input:hover,
+.form__input:focus,
+textarea:hover,
+textarea:focus {
+    outline: transparent;
+    border-color: $accent-color;
+
+}
+
+.form__input:focus+.form-img,
+.form__input:hover+.form-img {
+    fill: $accent-color;
+}
+
+.form__input {
+    transition: border-color 250ms $timing-function;
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 2px solid $primary-text-color;
+    border-radius: 2px;
+
+}
+
+
+.checkbox:checked+.icon {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    background-image: url(../images/fullcheck.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.checkbox:focus+.icon {
+    border-color: $accent-color;
+}
+
+.form__label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $title-text-color;
+
+}
+
+.agree-text {
+    align-self: center;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 1.16;
+    color: $title-text-color;
+}

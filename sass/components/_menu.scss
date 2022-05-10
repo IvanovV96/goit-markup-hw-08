@@ -1,0 +1,76 @@
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width:$tablet){
+        display: none;
+    }
+}
+
+.menu-button .icon-cross {
+    display: none;
+}
+
+.menu-button.is-open .icon-cross {
+    display: block;
+}
+
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+.menu-button .icon-menu {
+    display: block;
+}
+
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 796px;
+    padding: 48px 40px;
+    text-align: center;
+    z-index: 1;
+    background-color: $white-color;
+
+    &.is-open {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+}
+
+.social {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.social__link {
+    @extend %link;
+    
+    &:visited {
+        color: currentColor;
+    }
+}

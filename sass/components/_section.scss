@@ -1,0 +1,18 @@
+.section {
+    
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section--nopadding {
+    padding-top: 0;
+}
+
+.section__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+}
