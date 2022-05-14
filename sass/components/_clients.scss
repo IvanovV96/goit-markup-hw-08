@@ -2,12 +2,22 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
+    @media screen and (min-width:$desktop) {
+        flex-wrap: nowrap;
+    }
     justify-content: center;
     margin: -15px;
 }
 
 .clients__item {
-    width: calc((100% - 4*15px)/2);
+    @media screen and (max-width: $mobile) {
+        width: calc((100% - 60px)/2);
+    }
+    
+    @media screen and (min-width: $mobile) {
+        width: calc((100% - 90px)/3);
+    }
+   
     margin: 15px;
     border-radius: 4px;
 

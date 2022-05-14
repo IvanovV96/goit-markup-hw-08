@@ -10,7 +10,7 @@
             <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
                 rel="stylesheet">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-            <link rel="stylesheet" href="./css/common.css">
+            
             <link rel="stylesheet" href="./css/main.min.css"> 
         <!-- <link rel="stylesheet" href="./css/style.css"> -->
         </head>
@@ -22,7 +22,7 @@
                         <nav class="main-nav">
                                         <a class="logo" href="./index.html" lang="en">
                                         <span class="logo__word">Web</span>Studio</a> 
-                                    
+                            
                                     <button 
                                     class="menu-button" 
                                     type="button"
@@ -42,24 +42,21 @@
                                     id="menu-container" 
                                     data-menu
                                     >
-                                    <div class="navigation">
                                         <ul class="nav">
                                             <li class="nav__item"><a class="nav__link current" href="">Студия</a></li>
                                             <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
                                             <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
                                         </ul>
-                                    </div>
-                                    <div class="contacts-list">
                                         <ul class="contacts">
                                             <li class="contacts__item">
-                                                <a class="contacts__link contacts__link--blue link-none" href="tel:+380961111111">
+                                                <a class="contacts__link contacts__link--blue" href="tel:+380961111111">
                                                     <svg class="contacts__icon" width="10" height="16">
                                                         <use href="./images/icons.svg#icon-smartphone"></use>
                                                     </svg>
                                                     +380961111111</a>
                                             </li>
                                             <li class="contacts__item">
-                                                <a class="contacts__link link-none" href="mailto:info@devstudio.com">
+                                                <a class="contacts__link contacts__link--gray" href="mailto:info@devstudio.com">
                                                     <svg class="contacts__icon" width="16" height="12">
                                                         <use href="./images/icons.svg#icon-email"></use>
                                                     </svg>info@devstudio.com</a>
@@ -78,7 +75,7 @@
                                                 </ul>
                                             
                                         
-                                    </div>
+                                    
                                 </div>
                         </nav>
                         
@@ -361,9 +358,9 @@
                     </section>
                 </main>
                 <!--Подвал-->
-            <footer class="footer">
-                <div class="container foot">
-                    <div class="foot-address">
+            <footer class="footer container">
+                <div class="foot">
+                    <div class="foot__address">
                     <a class="logo footer__logo" href="./index.html" lang="en">
                         <span class="logo__word">Web</span>Studio</a>
                     <address class="address">
@@ -374,7 +371,7 @@
                     </ul>
                     </address>
                     </div>
-                    </div>
+                    
                     <div class="social-footer">
                     <strong class="footer__title">Присоединяйтесь</strong>
                     <ul class="icons list">
@@ -404,25 +401,19 @@
                             </a></li>
                     </ul>
                     </div>
-                    
+                </div>
+                </div>
                     <div class="form-foot">
                     <strong class="footer__title">Подпишитесь на рассылку</strong>
                     <form action="#" class="form-footer">
                         <input type="email" name="mail-foot" id="mail-foot" class="form-footer__field" placeholder="E-mail">
                         <div class="btn-wrapper">
                         <button type="submit" class="form-footer__btn">Подписаться</button>
-                        <!-- <div class="form-footer__img">
-                        <svg class="foot-svg">
-                                <use href="./images/icons.svg#icon-telegram"></use>
-                            </svg> 
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.863 20.3235L14.975 18.5131L14.6483 18.3921L14.4217 18.6566L11 22.6484V17.5569L19.9017 5.54776L19.1581 4.88525L7.55359 15.7644L1.18652 13.4063L23.3215 0.955331L19.863 20.3235Z" fill="white" stroke="black" />
-                            </svg> 
-                            </div> -->
                         </div>
                     </form>
                     </div>
                 </div>
+                
             </footer>
 
             <div class="backdrop is-hidden" data-modal>

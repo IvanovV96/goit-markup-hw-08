@@ -1,10 +1,16 @@
-/*.features {
-    display: flex;
+@media screen and (min-width:$mobile) {
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    
+    .features__item {
+        width: calc((100% - 60px) / 2);
+        margin: 15px;
+    }
 }
 
-.features__item {
-    width: calc((100% - 90px) / 4);
-}*/
  
 
 
@@ -24,14 +30,14 @@
 
 .features__item {
     text-align: center;
-    &:not(:last-child) {
-        margin-bottom: 30px;
-    }
+    
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    
 }
 
-/*.features__item:not(:last-child) {
-    margin-right: 30px;
-}*/
+
 
 .features__title {
     margin-top: 0;

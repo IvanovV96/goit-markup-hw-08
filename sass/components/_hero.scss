@@ -2,7 +2,7 @@
     padding-top: 184px;
     padding-bottom: 216px;
     height: 400px;
-   
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     letter-spacing: 0.06em;
@@ -16,9 +16,17 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+    
+  
+
 
 
 .hero__title {
+    @media screen and (max-width: $desktop) {
+        width: 396px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     margin-top: 0;
     margin-bottom: 30px;
     color: $white-color;

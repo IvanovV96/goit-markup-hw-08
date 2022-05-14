@@ -6,12 +6,11 @@
 .card-set {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
 }
 }
 .card-set__item {
     /*width: calc((100% - 60px) / 3);*/
     width: 370px;
-    margin: 15px;
+    margin-bottom: 15px;
     transition: box-shadow 250ms var(--timing-function);
 }

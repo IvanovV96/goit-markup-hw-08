@@ -1,3 +1,4 @@
+
 .menu-button {
     display: inline-flex;
     margin: 0;
@@ -9,10 +10,10 @@
     &:focus {
         fill: $accent-color;
     }
-
-    @media screen and (min-width:$tablet){
+    @media screen and (min-width: $tablet) {
         display: none;
     }
+   
 }
 
 .menu-button .icon-cross {
@@ -31,22 +32,30 @@
 }
 
 .menu-container {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 796px;
-    padding: 48px 40px;
-    text-align: center;
-    z-index: 1;
-    background-color: $white-color;
+   
 
-    &.is-open {
+   
+    @media screen and (max-width: $tablet) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        padding: 48px 40px;
+        text-align: center;
+        background-color: $white-color;
+        &.is-open {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @media screen and (min-width: $tablet){
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
         justify-content: space-between;
-
+        
     }
 }
 
@@ -54,6 +63,9 @@
     @extend %list;
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
 }
 
 .social__item {
