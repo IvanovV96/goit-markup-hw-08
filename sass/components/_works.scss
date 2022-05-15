@@ -1,5 +1,62 @@
-@media screen and (max-width:$desktop) {
-    .work {
+ 
+.work {
+    min-height: 300px;
+    @extend %list;
+    @include list (flex, nowrap, null, null, null, null, -15px);
+    @media screen and (max-width:$desktop) {
         display: none;
     }
+    
+}
+.work__title {
+    @media screen and (max-width:$desktop) {
+        display: none;
+    }
+}
+
+.work__item {
+    position: relative;
+    @include item (null, null, null, null, 15px, $tabq, $gapItem);
+    background-image: url(../../images/wrk1.jpg);
+    background-size: cover;
+    @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../../images/wrk1-2x.jpg);
+        background-size: cover;
+    }
+    &:nth-child(2) {
+        background-image: url(../../images/wrk2.jpg);
+        background-size: cover;
+        @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../../images/wrk2-2x.jpg);
+            background-size: cover;
+            }
+    }
+    &:nth-child(3) {
+        background-image: url(../../images/wrk3.jpg);
+        background-size: cover;
+        @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../../images/wrk3-2x.jpg);
+                background-size: cover;
+            }
+    }
+    
+}
+.work__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 70px;
+    @include font (14px, null, 700, 16px, null, $white-color, null);
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, .8);
 }

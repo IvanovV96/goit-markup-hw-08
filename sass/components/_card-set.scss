@@ -1,16 +1,28 @@
 .card-set {
     @extend %list;
 }
-
-@media screen and (min-width: $mobile) {  
+ 
 .card-set {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width: $mobile){
+    @include list(flex, wrap, null, null, null, null, -15px)
 }
 }
+
 .card-set__item {
     /*width: calc((100% - 60px) / 3);*/
-    width: 370px;
-    margin-bottom: 15px;
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: $tablet){
+        @include item(null, null, null, null, 15px, $mobq, $gapItem);
+        
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include item(null, null, null, null, 15px, $tabq, $gapItem);
+    }
+    
     transition: box-shadow 250ms var(--timing-function);
 }

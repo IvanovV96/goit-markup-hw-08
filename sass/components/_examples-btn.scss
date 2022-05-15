@@ -1,9 +1,20 @@
-@media screen and (max-width:$mobile) {
-    .works {
-        display: flex;
-        flex-wrap: wrap;
+ 
+.works {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+        
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        margin-bottom: 30px;
     }
-}
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
+
+    }
+
 
 .works__item {
     margin-bottom: 15px;
@@ -13,17 +24,11 @@
 }
 
 .works__btn {
+    @include transition (color, background-color, box-shadow, $timing-function, 250ms);
+    @include font(16px, null, 500, 26px, null, $primary-text-color, center);
     display: inline-block;
     border-radius: 4px;
     padding: 6px 22px;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: inherit;
-    transition: color 250ms $timing-function,
-        background-color 250ms $timing-function,
-        box-shadow 250ms $timing-function;
     cursor: pointer;
 
 }

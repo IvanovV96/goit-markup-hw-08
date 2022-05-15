@@ -1,15 +1,18 @@
-@media screen and (min-width: $mobile)  and (max-width: $desktop){
-    .team {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
+.team {
+    @include list(flex, wrap, null, null, null, null, -15px);
     }
-    .team__item {
-        width: calc((100% - 60px) / 2);
-        margin: 15px;
+.team__item {
+    margin: 15px;
+    @media screen and (min-width: $mobile) {
+        width: 100%;
     }
-}
-
+    @media screen and (min-width: $mobile) {
+        @include item(null, null, null, null, 15px, $mobq, $gapItem); 
+    }
+    @media screen and (min-width: $desktop) {
+        @include item(null, null, null, null, 15px, 4, $gapItem);    
+    }
+    }
 
 .section__team--bg {
     background-color: $secondary-background-color;
@@ -27,16 +30,12 @@
 
 .team__name {
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.18;
+    @include font (16px, null, 500, 19px, null, null, null);
 }
 
 .team__position {
     margin-bottom: 16px;
-    color: $title-text-color;
-    font-size: 16px;
-    line-height: 1.18;
+    @include font (16px, null, null, 19px, null, $title-text-color, null);
 }
 
 .team__block {

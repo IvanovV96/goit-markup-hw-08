@@ -1,45 +1,44 @@
 .clients {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (min-width:$desktop) {
-        flex-wrap: nowrap;
+
+    @include list(flex, wrap, null, null, null, null, -15px);
+    
+    @media screen and (min-width: $desktop){
+        flex-wrap:nowrap;
     }
-    justify-content: center;
-    margin: -15px;
 }
 
 .clients__item {
-    @media screen and (max-width: $mobile) {
-        width: calc((100% - 60px)/2);
+    @media screen and (max-width: $tablet) {
+    @include item(null, null, null, null, 15px, $mobq, $gapItem);
     }
     
-    @media screen and (min-width: $mobile) {
-        width: calc((100% - 90px)/3);
+    @media screen and (min-width: $tablet) {
+    @include item(null, null, null, null, 15px, $tabq, $gapItem);
     }
-   
-    margin: 15px;
+    @media screen and (min-width: $desktop) {
+    @include item(null, null, null, null, 15px, $deskq, $gapItem);
+        
+    }
     border-radius: 4px;
 
 }
 
 
 .clients__link {
+    @include transition(border-color, fill, null, $timing-function, 250ms);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 170px;
+    
     min-height: 92px;
     fill: $social-sprite-color;
     border: 1px solid $social-sprite-color;
     border-radius: 4px;
-    transition:
-        border 250ms $timing-function,
-        fill 250ms $timing-function;
     &:hover,
     &:focus {
+        outline: transparent;
         border-color: $accent-color;
-        border-radius: 4px;
         fill: $accent-color;
         }
 }

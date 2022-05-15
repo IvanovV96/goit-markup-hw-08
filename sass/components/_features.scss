@@ -1,18 +1,27 @@
-@media screen and (min-width:$mobile) {
-    .features {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -15px;
+
+.features {
+    @media  screen and (min-width:$mobile) {
+        @include list(flex, wrap, null, null, null, null, -15px);
+    }    
     }
     
-    .features__item {
-        width: calc((100% - 60px) / 2);
-        margin: 15px;
+   
+.features__item {
+    @media screen and (max-width:$mobile) {
+        width: 100%;
+        text-align: center; 
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width:$mobile) {
+        @include item(null, null, null, null, 15px, $mobq, $gapItem);
+    }
+   
+    @media screen and (min-width:$desktop) {
+        @include item(null, null, null, null, 15px, 4, $gapItem);
     }
 }
-
- 
-
 
 .features__icon {
     width: 70px;
@@ -28,20 +37,10 @@
     background-color: $secondary-background-color;
 }
 
-.features__item {
-    text-align: center;
-    
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
-    
-}
-
-
-
 .features__title {
     margin-top: 0;
     margin-bottom: 10px;
+    @include font (14px, null, 700, 16px, 0.03em, $primary-text-color, null);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -51,7 +50,6 @@
 .features__text {
     margin-top: 0;
     margin-bottom: 0;
-    color: $title-text-color;
-    font-size: 14px;
-    line-height: 1.71;
+    @include font (14px, null, null, 24px, null, $title-text-color, null);
+   
 }

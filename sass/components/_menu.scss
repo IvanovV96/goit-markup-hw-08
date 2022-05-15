@@ -32,16 +32,13 @@
 }
 
 .menu-container {
-   
-
-   
     @media screen and (max-width: $tablet) {
         display: none;
         position: absolute;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
-        
         padding: 48px 40px;
         text-align: center;
         background-color: $white-color;
@@ -62,21 +59,20 @@
 .social {
     @extend %list;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     @media screen and (min-width: $tablet) {
         display: none;
     }
 }
 
 .social__item {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    color: $accent-color;
+    @include font (18px, null, 500, 22px, 0.02em, $accent-color, null);
     &:not(:last-child) {
-        margin-right: 20px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;   
     }
+    padding-left: 10px;
+    
 }
 
 .social__link {

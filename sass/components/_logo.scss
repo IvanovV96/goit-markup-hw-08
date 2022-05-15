@@ -1,15 +1,14 @@
 .logo {
     @extend %link;
+    @include font (24px, Raleway, 700, 28px, null, $black-color, null);
     display: inline-block;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    color: $black-color;
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    @media screen and (min-width: $desktop) {
+    @include font (26px, Raleway, 700, 31px, null, $black-color, null);
+    }
 }
+    
 
 .logo__word {
     color: $accent-color;

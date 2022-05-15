@@ -8,6 +8,7 @@
 }
 
 .icons__link {
+    @include transition (background-color, fill, null, $timing-function, 250ms);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +16,6 @@
     height: 44px;
     border-radius: 50%;
     fill: $social-sprite-color;
-    transition: background-color 250ms $timing-function,
-        fill 250ms $timing-function;
 }
 
 .icons__img {

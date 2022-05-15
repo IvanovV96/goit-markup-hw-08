@@ -5,36 +5,45 @@
     text-align: center;
     flex-direction: column;
    }
-   @media screen and (min-width: $desktop) {
-       margin-left: auto;
-   }
+   
+   
+}
+
+.form__wrapper {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        
+    }
 }
 
 
-
 .form-footer__field {
-    min-height: 50px;
-    min-width: 358px;
     padding: 12px 16px;
     margin-right: 12px;
     margin-bottom: 20px;
-    @media  screen and (max-width: $tablet) {
-        margin-right: auto;
-        margin-left: auto;
+    min-width: 358px;
+    min-height: 50px;
+    @media screen and (max-width: $mobile) {
+        width: 100%;
     }
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     color: $white-color;
     background-color: $secondary-bg-color;
+        &:hover,
+        &:focus {
+            outline: transparent;
+            border-color: $white-color;
+        }
+    &::placeholder {
+        color: rgba(255, 255, 255, .6);
+}
 }
 
-.form-footer__field:hover,
-.form-footer__field:focus {
-    outline: transparent;
-    border-color: $white-color;
-}
+
 
 .form-footer__btn {
+    @include font (16px, null, 700, 30px, null, $white-color, null);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,25 +53,21 @@
     margin-right: auto;
     border: none;
     border-radius: 4px;
-    color: $white-color;
     background-color: $accent-color;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font (16px, null, 700, 30px, null, $white-color, null);
     cursor: pointer;
-
     transition: background-color 250ms $timing-function;
-
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        background-image: url(../images/telegram.svg);
+        }
 }
 
-.form-footer__btn::after {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    background-image: url(../images/telegram.svg);
-}
+
 
 .form-footer__img {
     position: absolute;
@@ -77,6 +82,3 @@
     height: 50px;
 }
 
-.form-footer__field::placeholder {
-    color: rgba(255, 255, 255, .6);
-}

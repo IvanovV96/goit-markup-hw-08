@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    
 
     @extend %list;
     @media screen and (max-width:$tablet) {
         margin-top: 300px;
         margin-bottom: 60px;
+}
+    @media screen and (min-width:$desktop) {
+        flex-direction: row;
 }
     
 }
@@ -18,9 +22,7 @@
 }
 
 
-/*.contacts__item+.contacts__item {
-    margin-left: 50px;
-}*/
+
 
 .contacts__icon {
     margin-right: 11px;
@@ -31,31 +33,35 @@
 
 .contacts__item {
     display: flex;
-    justify-content: flex-start;
-    @media  screen and (min-width: $tablet) {
+    @media  screen and (max-width: $desktop) {
         &:not(:last-child){
         margin-bottom: 10px;
     }
     }   
-        @media screen and (max-width: $tablet) {
-            &:not(:last-child) {
+    @media screen and (max-width: $tablet) {
+        &:not(:last-child) {
         margin-bottom: 32px;
-        }
     }
+    }
+    @media screen and (min-width:$desktop){
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        }
+    
     
     
 }
 
 .contacts__link {
     @extend %link;
+    @include transition (color, fill, null, $timing-function, 250ms);
     display: inline-flex;
-    color: $title-text-color;
+    align-items: center;
     color: $title-text-color;
     fill: $title-text-color;
     border: none;
-    transition: color 250ms $timing-function,
-        fill 250ms $timing-function;
-        
+    
     &:hover,
     &:focus {
         color: $accent-color;
@@ -63,21 +69,28 @@
         border: none;
         }
    @media screen and (max-width:$tablet) {
-       
     &--blue {
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        color: $accent-color;
+        @include font (34px, null, 500, 40px, .02em, $accent-color, null);
     }
     &--gray {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.16;
-        letter-spacing: 0.02em;
+        @include font (24px, null, 500, 28px, .02em, $title-text-color, null);
     }
     }
-    
+
+    @media screen and (min-width: $tablet) {
+        &--gray{
+            padding-bottom: 18px;
+        }
+        &--blue{
+            padding-top: 18px;
+        }
+        @include font (12px, null, 500, 14px, .02em, $title-text-color, null);
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 0;
+        @include font (14px, null, 500, 16px, .02em, $title-text-color, null);
+    }
+   
 }
 

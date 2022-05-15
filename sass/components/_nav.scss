@@ -6,7 +6,7 @@
         align-items: center;
     }
     display: flex;
-    align-items: baseline;
+    align-items: center;
     
     
     
@@ -55,17 +55,13 @@
         color: $accent-color;
     }
     @media screen and (max-width: $tablet) {
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
+        @include font (40px, null, 500, 47px, .02em, null, null);
+      
     }
     @media screen and (min-width: $tablet) {
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
         padding-top: 32px;
         padding-bottom: 32px;
+        @include font (14px, null, 500, 16px, .02em, null, null);
     }
 }
 
