@@ -1347,6 +1347,7 @@ body.modal-open {
 
 @media screen and (max-width: 479.98px) {
   .form-footer__field {
+    min-width: 320px;
     width: 100%;
   }
 }
@@ -1921,16 +1922,22 @@ textarea:focus {
 }
 
 .card-set__item {
+  height: auto;
   /*width: calc((100% - 60px) / 3);*/
-  -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
-  transition: -webkit-box-shadow 250ms var(--timing-function);
-  transition: box-shadow 250ms var(--timing-function);
-  transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 479.98px) {
   .card-set__item {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .card-set__item {
     margin-bottom: 15px;
   }
 }
@@ -1967,6 +1974,12 @@ textarea:focus {
   border-bottom: 1px solid #ececec;
   border-right: 1px solid #ececec;
   border-left: 1px solid #ececec;
+}
+
+@media screen and (min-width: 767.98px) and (max-width: 1199.98px) {
+  .product__meta {
+    min-height: 147px;
+  }
 }
 
 .product__thumb {

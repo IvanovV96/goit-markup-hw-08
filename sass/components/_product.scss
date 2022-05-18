@@ -18,12 +18,14 @@
     border-bottom: 1px solid #ececec;
     border-right: 1px solid #ececec;
     border-left: 1px solid #ececec;
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+        min-height: 147px;
+    }
 }
 
 .product__thumb {
     position: relative;
     overflow: hidden;
-    
 }
 
 .product__overlay {
