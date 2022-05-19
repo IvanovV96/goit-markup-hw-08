@@ -6,8 +6,7 @@
 
     @extend %list;
     @media screen and (max-width:$tablet) {
-        margin-top: 300px;
-        margin-bottom: 60px;
+        margin-top: auto;
 }
     @media screen and (min-width:$desktop) {
         flex-direction: row;

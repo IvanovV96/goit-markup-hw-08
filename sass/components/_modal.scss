@@ -9,7 +9,7 @@
     overflow-y: scroll;
     background-color: rgba(0, 0, 0, .2);
     opacity: 1;
-    transition: opacity 250ms var(--timing-function);
+    transition: opacity 250ms $timing-function;
 }
 
 .backdrop.is-hidden {
@@ -30,7 +30,10 @@
     background-color: $white-color;
     border-radius: 4px;
     transition: transform 250ms $timing-function;
-    
+    @media screen and (max-width: $mobile) {
+       
+        width: 98%;
+    }
     @media screen and (min-width: $desktop) {
         min-width: 528px;
     }
@@ -136,7 +139,10 @@
 
 .agree-text {
     align-self: center;
-    white-space: nowrap;
+    flex-wrap: nowrap;
+    @media screen and (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
     @media screen and (max-width: $desktop) {
         @include font (12px, null, null, 14px, null, $title-text-color, null);
     }

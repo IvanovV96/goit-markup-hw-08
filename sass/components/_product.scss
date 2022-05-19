@@ -1,16 +1,14 @@
 .product {
     @extend %link;
-    display: block;
+   
     &:focus,
     &:hover {
         outline: transparent;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
-    
-    
     }
-}
+    }
 
 .product__meta {
     color: $primary-text-color;
@@ -18,9 +16,7 @@
     border-bottom: 1px solid #ececec;
     border-right: 1px solid #ececec;
     border-left: 1px solid #ececec;
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-        min-height: 147px;
-    }
+    
 }
 
 .product__thumb {
@@ -60,3 +56,8 @@
 .product__position {
     @include font (16px, null, null, 30px, null, $title-text-color, null);
 }
+
+.card-set__item > .product {
+    flex-grow: 1;
+}
+

@@ -38,13 +38,16 @@
         z-index: 1;
         top: 0;
         left: 0;
+        height: 100vh;
         width: 100%;
         padding: 48px 40px;
         text-align: center;
         background-color: $white-color;
+        transition: background-color 250ms $timing-function;
         &.is-open {
             display: flex;
             flex-direction: column;
+            transition: background-color 250ms $timing-function;
         }
     }
     @media screen and (min-width: $tablet){

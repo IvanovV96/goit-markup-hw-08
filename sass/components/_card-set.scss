@@ -9,7 +9,8 @@
 }
 
 .card-set__item {
-    height: auto;
+    display: flex;
+        flex-direction: column;
     /*width: calc((100% - 60px) / 3);*/
     @media screen and (max-width: $mobile) {
         width: 100%;
@@ -21,6 +22,7 @@
     
 
     @media screen and (min-width: $tablet){
+       
         @include item(null, null, null, null, 15px, $mobq, $gapItem);
         
     }
