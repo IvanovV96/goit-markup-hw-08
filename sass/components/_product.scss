@@ -1,6 +1,5 @@
 .product {
     @extend %link;
-   
     &:focus,
     &:hover {
         outline: transparent;
@@ -11,6 +10,7 @@
     }
 
 .product__meta {
+    flex-grow: 1;
     color: $primary-text-color;
     padding: 20px 24px;
     border-bottom: 1px solid #ececec;
@@ -46,6 +46,10 @@
     height: 168px;
     margin: 63px 24px;
     @include font (18px, null, null, 28px, null, $white-color, null);
+    @media screen and (max-width: $mobile) {
+        width: 95%;
+        margin: 77px 10px;
+    }
 }
 
 .product__name {
@@ -57,7 +61,4 @@
     @include font (16px, null, null, 30px, null, $title-text-color, null);
 }
 
-.card-set__item > .product {
-    flex-grow: 1;
-}
 

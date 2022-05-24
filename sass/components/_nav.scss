@@ -1,18 +1,6 @@
 
-.main-nav   {
-    @media screen and (max-width: $tablet) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    display: flex;
-    align-items: center;
-    
-    
-    
-}
-
 .nav { 
+    display: none;
     text-align: start;
     @extend %list;
     @media screen and (min-width: $tablet) {
@@ -54,10 +42,6 @@
     &:focus {
         color: $accent-color;
     }
-    @media screen and (max-width: $tablet) {
-        @include font (40px, null, 500, 47px, .02em, null, null);
-      
-    }
     @media screen and (min-width: $tablet) {
         padding-top: 32px;
         padding-bottom: 32px;
@@ -81,6 +65,7 @@
     opacity: 1;
 }
 }
+
 
 
     

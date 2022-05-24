@@ -1,13 +1,11 @@
 .contacts {
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
-
     @extend %list;
-    @media screen and (max-width:$tablet) {
-        margin-top: auto;
-}
     @media screen and (min-width:$desktop) {
         flex-direction: row;
 }
@@ -92,4 +90,5 @@
     }
    
 }
+
 

@@ -3,14 +3,18 @@
 }
  
 .card-set {
+    
     @media screen and (min-width: $mobile){
     @include list(flex, wrap, null, null, null, null, -15px)
-}
+    }
+    @media screen and (max-width: $tablet) {
+        margin-top: 40px;
+    }
 }
 
 .card-set__item {
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
     /*width: calc((100% - 60px) / 3);*/
     @media screen and (max-width: $mobile) {
         width: 100%;
@@ -32,4 +36,10 @@
     }
     
     transition: box-shadow 250ms $timing-function;
+}
+
+.card-set__item > .product {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
 }
